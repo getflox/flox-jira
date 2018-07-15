@@ -27,10 +27,13 @@ setup(
     packages=find_packages(where=dirname(abspath(__file__))),
     entry_points='''
         [flox.cli_plugins]
-        git=flox_jira.jira:jira
+        jira=flox_jira.jira:jira
 
         [flox.cli_plugins.config]
-        aws=flox_jira:config
+        jira=flox_jira:config
+        
+        [flox.cli_plugins.services]
+        jira=flox_jira:services
     ''',
     install_requires=install_requires,
     tests_require=tests_require,
