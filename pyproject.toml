@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "flox-jira"
+version = "0.1.0"
+description = "Automatic project and component creation with jira"
+homepage = "https://github.com/getflox/flox-jira"
+authors = ["Michal Przytulski <michal@przytulski.pl>", "Daniel Ancuta <whisller@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+atlassian-python-api = "^1.15.6"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."flox.plugin"]
+jira = "flox_jira:plugin"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
